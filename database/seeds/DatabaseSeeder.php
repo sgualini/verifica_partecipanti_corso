@@ -15,7 +15,8 @@ class DatabaseSeeder extends Seeder
         Model::unguard();
 
         // $this->call(UserTableSeeder::class);
-
+DB::table('attendees')->delete();        
+$this->call(AttendeesSeeder::class);
         Model::reguard();
     }
 }
